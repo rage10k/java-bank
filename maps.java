@@ -13,7 +13,7 @@
 ##  Date :   27.05.17                                                                      ##
 ##  Company: Open University                                                               ##
 ##  Author:  R.Emmanuel                                                                    ##
-##  Email:   richard.emmanuel@live.co.uk			                           ##
+##  Email:   richemman81@gmail.com            			                           ##
 ##  Version: v0.1                                                                          ##
 ##  Source:  Java 1.8                                                                      ## 
 ###########################################################################################*/
