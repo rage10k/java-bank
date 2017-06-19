@@ -32,7 +32,7 @@ class FileReader
 {
    public FileReader()
    {
-      OUFileChoooser.SetPath(“/User/Xavier/Desktop/“);
+      OUFileChoooser.SetPath(“/User/Xavier/Desktop/“);  // This library is not commonly available has it constructed by the OU "OUFileChooser".
       String pathname = OUFileChooser.getFilename(“emmanuel.txt”);
       File aFile =  new File(pathname);
       
