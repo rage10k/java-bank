@@ -18,8 +18,8 @@
 ##  Source:  Java 1.8                                                                      ## 
 ###########################################################################################*/
 /**
- * This source code has been put together to demonstrate how to use some collection Map and
- * array.
+ * This source code has been put together to demonstrate how to use some collections, Map and
+ * array. These examples have been put together by myself as I have been working throw a mock.
  */
 
 import java.util.*;
@@ -27,34 +27,28 @@ import java.lang.*;
 import ou.*;
 
 
-class Player
-{
+class Player{
    private int goals;
    private String name;
    
-   public Player()
-   {
+   public Player(){
       this.goals() = 0;
       this.name() = null;
    }
  
-   public int getGoals()
-   {
+   public int getGoals(){
       return this.goals();
    }
 
-   public String getName()
-   {
+   public String getName(){
       return this.name();
    }
 
-   public void setName(String aName)
-   {
+   public void setName(String aName){
       this.name = aName;      
    }
 	
-   public toString()
-   {
+   public toString(){
       if(this.getGoals() != 0)
 	{
            return “Player ”+ this.getName() + “has scored ” + this.goals;
@@ -64,100 +58,77 @@ class Player
            return “Player ”+ this.getName() + “has scored no goals”;       
 	}
    }
-}
+} // this is the end of the player class.
 
 
 
-// Question 2
-interface Feedable
-{
-
+/* Question 2 - Here I am just practicing making use of an Interface */
+interface Feedable{
   public boolean feed();
-}
+} 
 
 
 
 
-HungryFrog extends Frog implements Feedable
-{
+HungryFrog extends Frog implements Feedable{
   private int energyLevel;
   private final int FULL = 2000;	
   
-  public HungryFrog()
-  {
+  public HungryFrog(){
     super();
     this.energyLevel = this.FULL;
-    
   }
 
-  public int getEnergyLevel()
-  {
+  public int getEnergyLevel(){
     return this.energyLevel;
   }
 
-  public void setEnergyLevel(int x)
-  {
+  public void setEnergyLevel(int x){
     this.energyLevel = x;
   }
  
 
  
   @Override
-  public void setPosition (int aPosition)
-  {
+  public void setPosition (int aPosition){
     int x = getEnergyLevel();
     int y = aPosition * 100;
 
-    if(x >= y)
-    {
+    if(x >= y){
       super.position(aPosition);
       this.update("position");
       this.setEnergyLevel(this.getEnergyLevel() - (aPosition * 100));
-    }
-    else
-    {
+    }else{
       OUDialog.alert(“insufficient energy levels to move!”);
     }
   }
 
 
 
-  public boolean feed()
-  {
+  public boolean feed(){
     int x = this.getPosition();   
     System.out.println(x);
-    if((x >= 1) && (x <= 10))
-    {
-      while (this.getEnergyLevel() < FULL )
-      {
+    if((x >= 1) && (x <= 10)){
+      while (this.getEnergyLevel() < FULL ){
          this.croak();
          this.setEnergyLevel(this.getEnergyLevel() + (100));
       }
-    }
-    else
-    {
+    }else{
       System.out.println("out of range!");
-      if( x < 1)
-      {
+      if( x < 1){
          super.setPosition(1);
          this.feed();
-      }
-      else if (x > 10)
-      {
+      }else if (x > 10){
          super.setPosition(10);
          this.feed();
        }
+      }return true;
     }
-    return true;
   }
 
-  
-}
-
-Question 3
+// Question 3
 
 int[] temp = new int[11];
-
 
 Set<String> myList = new HashSet<>();
 
