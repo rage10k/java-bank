@@ -13,13 +13,13 @@
 ##  Date :   27.05.17                                                                      ##
 ##  Company: Open University                                                               ##
 ##  Author:  R.Emmanuel                                                                    ##
-##  Email:   richemman81@gmail.com            			                           ##
+##  Email:   richemman81@gmail.com                        			                           ##
 ##  Version: v0.1                                                                          ##
 ##  Source:  Java 1.8                                                                      ## 
 ###########################################################################################*/
 /**
  * This source code has been put together to demonstrate how to use some collections, Map and
- * array. These examples have been put together by myself as I have been working throw a mock.
+ * array. These examples have been put together by myself as I have been working through a mock.
  */
 
 import java.util.*;
@@ -49,14 +49,13 @@ class Player{
    }
 	
    public toString(){
-      if(this.getGoals() != 0)
-	{
+      if(this.getGoals() != 0){ 
            return “Player ”+ this.getName() + “has scored ” + this.goals;
-        }
-        else
-        {
-           return “Player ”+ this.getName() + “has scored no goals”;       
-	}
+
+        }else{
+           return “Player ”+ this.getName() + “has scored no goals”;
+
+	    }
    }
 } // this is the end of the player class.
 
@@ -106,15 +105,20 @@ HungryFrog extends Frog implements Feedable{
 
 
   public boolean feed(){
+
     int x = this.getPosition();   
     System.out.println(x);
+
     if((x >= 1) && (x <= 10)){
+
       while (this.getEnergyLevel() < FULL ){
          this.croak();
          this.setEnergyLevel(this.getEnergyLevel() + (100));
       }
+
     }else{
       System.out.println("out of range!");
+
       if( x < 1){
          super.setPosition(1);
          this.feed();
@@ -122,9 +126,10 @@ HungryFrog extends Frog implements Feedable{
          super.setPosition(10);
          this.feed();
        }
-      }return true;
-    }
+
+    }return true;
   }
+}
 
 // Question 3
 
