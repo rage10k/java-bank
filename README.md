@@ -1,1 +1,1 @@
-# javabank
+# javaBank
